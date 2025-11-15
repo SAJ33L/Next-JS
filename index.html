@@ -6,16 +6,27 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/jsx">
             const app = document.getElementById("app");
-            function Header(){
-                return <h1>Develop. Preview. Ship</h1>;
+            function createTitle(title) {
+                if(title){
+                    return title;
+                }
+                else{
+                    return "Deafult Title";
+                }
             }
+
+            function Header(props){
+                console.log(props);
+                return <h1>{createTitle(props.title)}</h1>;
+            }
+
 
             function HomePage(){
                 return (
                 <div>
                  {/* Nesting the Header component */}
-                 <Header />   
-                 <Header />
+                 <Header title="React" />  
+                 <Header /> 
                 </div>);
             }
             const root = ReactDOM.createRoot(app);
