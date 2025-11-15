@@ -2,7 +2,7 @@ import LikeButton from "./like-button";
 
 function Header(props){
     console.log(props);
-    return <h1>{props.title ? props.title : "Deafult Title"}</h1>;
+    return <h1>{props.title ? props.title : "Default Title"}</h1>;
 }
 
 export default function HomePage(){
